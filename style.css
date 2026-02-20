@@ -357,6 +357,7 @@ button:active {
 /*  CONTACT SECTION  */
 .contact-content {
   width: 100%;
+  min-height: 100vh;
 
   display: flex;
   gap: 10%;
