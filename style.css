@@ -110,10 +110,6 @@ img {
 } */
 
 
-
-
-
-
 .menu-container {
   display: flex;
   align-items: center;
@@ -175,7 +171,6 @@ img {
 
   min-height: 90vh;
   gap: 5%;
-    background: linear-gradient(to right, #FFF4E0, #FAF9F6);
 }
 
 .text-content {

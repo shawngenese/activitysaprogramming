@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Outfit:wght@100..900&display=swap');
+
+:root {
+  --main-color: #333333;
+  --main-bg-color: #FAF9F6;
+  --primary-color: #D62700;
+  --accent-color: #502322;
+  --secondary-color: #FFB800;
+  --subtext-color: #555555;
+  --divider-color: #D9D9D9;
+  --text-color: #000000;
+  --header-font: Changa One;
+  --normal-font : Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.main {
+    background-color: #FFF4E0;
+    min-height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log-reg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 500px;
+    width: 60%;
+    
+    border-radius: 50px;
+    box-shadow: 0 20px 10px rgba(0,0,0,0.1);
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+
+    border-radius: 50px 0 0 50px;
+    background-color: var(--primary-color);
+    color: var(--main-bg-color);
+}
+
+.left-side h1 {
+    font-size: 3.5rem;
+    font-family: var(--header-font);
+}
+
+.left-side p {
+    font-size: 1.1rem;
+    font-family: var(--normal-font);
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+
+
+    border-radius: 0 50px 50px 0;
+    background-color: var(--main-bg-color);
+}
+
+.log-type {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin: 10px;
+}
+
+.log-type button{
+    width: 100%;
+    height: 45px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.log-type button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.log-type .sign-in {
+    border-radius: 50px 0 0 50px;
+}
+
+.log-type .sign-up {
+    border-radius: 0 50px 50px 0;
+}
+
+
+.forms {
+    width: 100%;
+}
+.forms form{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+
+    gap: 20px;
+
+    transition: all 200ms ease;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--divider-color);
+    outline-color: var(--primary-color);
+
+    transition: all 300ms ease;
+}
+
+input:hover {
+    border: 1px solid var(--primary-color);
+}
+
+button[type="submit"] {
+    padding: 15px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--accent-color);
+
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+button[type="submit"]:active {
+    transform: scale(0.9);
+}
+
+.forms form.active {
+    display: flex;
+}
