@@ -14,6 +14,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
     color: var(--accent-color);
 }
 .contact-title {
@@ -21,10 +23,14 @@
     font-family: var(--normal-font);
     color: var(--accent-color);
 }
- h1{
+.other-contact h1{
     font-size: 1.5rem;
 }
-p {
+.contact-title h1,
+.contact-title p{
+    margin: 5px 0;
+}
+.other-contact p {
     font-size: 0.8rem;
 }
 .contact-title img  {
@@ -33,6 +39,7 @@ p {
 .contact-panel {
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -45,13 +52,14 @@ p {
     font-family: var(--normal-font);
     padding: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 .other-contact .contact-info button { 
     font-size: 0.9rem;;
     font-family: var(--normal-font);
     
     color: var(--main-bg-color);
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     
     border-radius: 5px;
     border: none;

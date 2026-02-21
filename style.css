@@ -38,6 +38,7 @@ li { list-style: none; }
 a {
   text-decoration: none;
   color: inherit;
+  transition: all 300ms ease;
 }
 img {
   mix-blend-mode: multiply;
@@ -138,12 +139,20 @@ img {
   background-color: var(--primary-color);
 }
 
+.menu-container li a:hover {
+  color: var(--primary-color);
+}
+
+.menu-container li a.active {
+  color: var(--primary-color);
+}
+
 .menu-container li a::after {
   content: '';
   display: block;
   height: 3px;
   width: 100%;
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
 
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -166,6 +175,7 @@ img {
 
   min-height: 90vh;
   gap: 5%;
+    background: linear-gradient(to right, #FFF4E0, #FAF9F6);
 }
 
 .text-content {
@@ -176,8 +186,10 @@ img {
 
 .text-content h1 {
   font-family: var(--header-font);
-  font-size: 3rem;
   color: var(--primary-color);
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 var(--secondary-color);
 }
 
 .text-content p {
@@ -197,7 +209,21 @@ img {
   border: none;
   border-radius: 5px;
 
+  transition: all 300ms ease;
   cursor: pointer;
+}
+
+.text-content .buttons button {
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.text-content .buttons button:hover {
+  transform: translateY(-6px);
+  background-color: var(--primary-color);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
 
 .main-image {
@@ -217,9 +243,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   
-
   background-color: var(--accent-color);
 }
 
@@ -233,6 +258,7 @@ img {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 
 .product {
   position: relative;
@@ -264,7 +290,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  height: 15%;
+  height: 55px;
 
   font-size: 1.3rem;
   font-family: var(--header-font);
@@ -319,7 +345,7 @@ img {
 }
 
 .about-content p {
-  font-family: var(--normal-font), sans-serif;
+  font-family: var(--normal-font);
   font-size: 1rem;
   line-height: 1.8;
 
@@ -374,7 +400,7 @@ button:active {
 
 .contact-texts h1 {
   font-family: var(--normal-font);
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 .contact-texts h1 + p{
@@ -420,6 +446,7 @@ button:active {
 
   border-radius: 10px;
   box-shadow: 1px 5px 10px rgba(0,0,0,.5);
+
 }
 
 input, textarea, label {
@@ -447,7 +474,7 @@ textarea:focus-visible {
 }
 
 .contact-details button {
-  width: 100px;
+  width: 100%;
   padding: 8px;
   margin: 20px 0;
 
@@ -457,11 +484,10 @@ textarea:focus-visible {
   color: var(--main-bg-color);
   background-color: var(--accent-color);
 
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
 }
-
 
 /*  FOOTER  */
 .footer-content {
