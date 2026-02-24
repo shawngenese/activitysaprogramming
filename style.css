@@ -93,7 +93,7 @@ img {
 
 .logo-container {
   flex: 1;
-  /* margin: 80px; */
+  margin: 0 30px;
 }
 
 .logo-container img {

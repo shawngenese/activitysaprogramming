@@ -205,8 +205,8 @@ button[type="submit"]:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
-    background-color: gray;
+    font-size: 3.5rem;
+    background-color: var(--primary-color);
     color: var(--main-bg-color);
     height: 130px;
     width: 130px;
@@ -216,19 +216,37 @@ button[type="submit"]:active {
 }
 
 .profile-container p {
-    color: var(--accent-color);
+    color: var(--main-color);
 }
 
 .profile-container button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-    width: 100%;
-    
+    padding: 15px;
     border-radius: 8px;
-    font-size: 1rem;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: var(--accent-color);
+
+    transition: all 300ms ease;
     cursor: pointer;
 }
+
+.profile-container button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.profile-container button:active {
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
 
 .profile-container .backToHome {
     color: gray;
